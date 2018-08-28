@@ -6,14 +6,17 @@ import UserLinks from '../UserLinks'
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   background: ${props => props.theme.brand};
+  margin-left: 50px;
+  margin-right: 50px;
 
   .nav-link {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-right: 10px;
     font-weight: 200;
-    color: black;
+    color: #ffffff;
   }
 
   @media screen and (max-width: 600px) {

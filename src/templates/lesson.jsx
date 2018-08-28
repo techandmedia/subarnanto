@@ -36,7 +36,7 @@ export default class LessonTemplate extends React.Component {
           <BodyContainer>
             <div>
               <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <p dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </div>
           </BodyContainer>
         </BodyGrid>
@@ -75,7 +75,11 @@ const BodyContainer = styled.div`
   }
 
   & > h1 {
-    color: ${props => props.theme.accentDark};
+    color: ${props => props.theme.lessonTitle};
+  }
+
+  & > p {
+    color: ${props => props.theme.lessonText};
   }
 `
 
@@ -89,6 +93,7 @@ const HeaderContainer = styled.div`
 `
 
 const ToCContainer = styled.div`
+  margin-left: 25px;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   background: ${props => props.theme.lightGrey};

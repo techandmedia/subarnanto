@@ -58,7 +58,8 @@ const StyledLinkList = styled.ol`
 const EntryTitle = styled.h6`
   display: inline-block;
   font-weight: 200;
-  color: black;
+  font-size: 1.4rem;
+  color: ${props => props.theme.brand};
   margin: 0;
   line-height: 1.5;
   border-bottom: 1px solid transparent;
@@ -84,23 +85,23 @@ const ChapterTitle = styled.h5`
       case 2:
         return '400'
       default:
-        return '200'
+        return '600'
     }
   }};
   font-size: ${({ level }) => {
     switch (level % 3) {
       case 1:
-        return '2.2rem'
+        return '1.6rem' // 1.1 Subchapter
       case 2:
-        return '1.8rem'
+        return '1.6rem' // Sub Chapter Biru
       default:
-        return '2.8rem'
+        return '1.8rem' // HTML
     }
   }};
   color: ${({ level, theme }) => {
     switch (level % 3) {
       case 1:
-        return 'black'
+        return '#846D6D'
       case 2:
         return theme.accent
       default:
